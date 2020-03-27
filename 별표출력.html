@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<head>
+<script>
+//문서에 문자열 출력!!    
+//document.write("<h1>안녕<br>하세요</h1>");
+//단일 포문+조건문으로 해결해보기!!
+//이중 반복문으로도 해결
+var n = prompt("원하는 줄바꿈 번째를 입력하세요");
+
+// %연산자 : ~~마다를 표현할때 유용~~
+for(var i=1;i<=25;i++){
+    if(i%n==0){  //5번째라면..줄바꿈 있는 검은별
+        document.write("★<br>");//5번마다..
+    }else{
+        document.write("☆");//그외 경우..
+    }
+}
+
+</script>
+</head>
+<body>
+    
+    
+
+</body>
+</html>

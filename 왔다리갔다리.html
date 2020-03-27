@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<head>
+<style> 
+#pic{
+    position: absolute;/*다른 요소들에 영향을 받지 않고 무조건 지정한
+    위치에 중첩이 가능한 배치방법*/
+    left:0px;
+    top:150px;
+}   
+</style>
+<script>
+//피카츄를 움직이되, 특정 위치(x값이 200)에 도달하면 다시 돌아오게..
+//돌아오다가,  원위치(x값 0)이면 다시 목표지점을 향행 가도록 처리
+var x = 0;
+
+function move(){
+    var pic = document.getElementById("pic");
+    x +=2;
+    document.getElementById("info").value=x; //정보창에 x값 출력
+    pic.style.left = x+"px";
+}
+</script>    
+</head>
+<body>
+<button onClick="move()">수동</button>    
+<button>자동</button>
+
+<input id="info" type="text" value="0"/>
+
+<img id="pic" src="../images/pica.png" width="50px"/>
+</body>
+</html>

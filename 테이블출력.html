@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<head>
+<script>
+    //document.write("철수가 \"안녕\"이라고 말했다");
+    //특수문자의 기능을 없애기 위해 앞에 표식을 이용하여 
+    //일반문자화 시키는 방법..역슬래시가 붙은 특수문자를
+    //Escape 문자: 프로그래밍 언어에서 공통으로 사용
+    var f=prompt("원하는 층수를 입력하세요");
+    var ho = prompt("원하는 호수를 입력하세요");
+
+    document.write("<table width=\"300px\" border=\"1px\">");
+    for(var i=1;i<100;i++){    
+        document.write("<tr>");//천장
+        for(var a=1;a<=10;a++){
+            document.write("<td>101호</td>");    
+        }
+        document.write("</tr>");//바닥
+    }
+    document.write("</table>");
+</script>    
+</head>
+<body>
+<!--
+개발자의 자존심상 하드코딩하지 말자
+프로그래밍적으로 출력해보자!!
+<table width="300px" border="1px">
+    <tr>
+        <td>201호</td>
+        <td>202호</td>
+        <td>203호</td>
+    </tr>  
+    <tr>
+        <td>101호</td>
+        <td>102호</td>
+        <td>103호</td>
+    </tr>  
+</table>   
+--> 
+</body>    
+</html>

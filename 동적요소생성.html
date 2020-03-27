@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+<style> 
+#container{
+    background:yellow;
+    width:100%; /*브라우저 크기 만큼..*/
+    height:300px;
+    overflow:auto;
+}    
+</style>
+<script>
+//body 안에 이미지 요소를 하드코딩하지 않고, 
+//프로그래밍적으로  즉 동적으로 생성해보자!!
+var count=0; //몇번째 눌렀는지를 체크하기 위한 변수 
+
+function createImage(){
+    //container라는 아이디를 갖는 요소안에다가, 이미지를 생성
+    //하여 부착해보자!!
+    var container=document.getElementById("container");
+
+    //프로그래밍적으로 없었던 요소를 생성하자!!
+    var img=document.createElement("img");
+    count++;//사용자가 누를때마다 1씩 카운트 세자!!
+
+    //단 두가지 판단대상이라면  if~else or 삼항연산자!!
+    var path = (count%5==0)?  "ball1.webp": "ball2.webp";
+    img.src="../images/"+path;
+ 
+   
+    img.style.width=50+"px"; //프로그래밍적으로 style부여
+    container.appendChild(img);//div안에 자식으로 동적추가!!
+}   
+
+function dump(){
+    var container=document.getElementById("container");
+
+    for(var i=1;i<=20;i++){
+        var img=document.createElement("img");
+        img.src="../images/ball1.webp";
+        img.style.width=50+"px"; //프로그래밍적으로 style부여
+        container.appendChild(img);// div 안에 자식으로 동적 추가!!
+    }
+}
+</script>    
+</head>
+<body>
+<button onClick="createImage()">낱개 생성</button>
+<button onClick="dump()">대량 생성</button>
+<div id="container"></div>
+</body>
+</html>
+
+
+
